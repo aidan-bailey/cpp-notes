@@ -5,7 +5,7 @@ Developed by Bjarne Stroustrop around 1979.
 
 Intended to be C with Object Orientation (without sacrificing performance or low level manipulation).
 
-_Notable Features_
+*Notable Features*
    - Virtual functions 
    - Operator overloading
    - Multiple inheritance
@@ -147,7 +147,7 @@ g++ fibdriver.o fib.o -o fib
 #include "filename"
 #+END_SRC
 1. Searches default dirs (*/usr/include*)
-2. Searches explicit include dirs (*-I/usr/local/matlib/include)
+2. Searches explicit include dirs (*-I/usr/local/matlib/include*)
 ** Pre-processor Macros
 Macros are defined with /#define/ and must preserve C++ syntax.
 
@@ -158,7 +158,7 @@ Can be a function or constant and should be defined with Upper-case names.
 #define MYSQR(x) ((x) * (x))
 #+END_SRC
 *** Conditional Macro Expansion
-    _#if, #ifdef, #ifndef_
+    *#if, #ifdef, #ifndef*
 #+BEGIN_SRC C++
 #if MYVAL==4 // define f() for 4
 string f(void) { return string("four"); }
@@ -168,7 +168,7 @@ string f(void) { return string("three"); }
 string f(void) { return string("fruit"); }
 #endif
 #+END_SRC
-    _Platform Specific Code_
+   *Platform Specific Code*
 #+BEGIN_SRC C++
 #ifdef _USING_WINDOWS // windows specific code
 string overlord(void) { return string("gates"); }
@@ -193,7 +193,7 @@ void do_bark(dogtype dog);
  #define STR3 STR1 STR2     // STR3 now compiled to "AJ"
  #+END_SRC
 * C++ Types
-  _Three Kinds_
+  *Three Kinds*
   + Simple
   + Aggregate
   + Class
@@ -204,12 +204,12 @@ void do_bark(dogtype dog);
   + *double* - system double precision float.
   + *short/long/long long* - short (half)/long (double) integer.
 
-  _Signed vs Unsigned_
+  *Signed vs Unsigned*
   + *bool* - 8 bit integer value. 0 converts to /false/ and non-zero value converts to /true/.
   + *unsigned char c* - u_char may also be defined.
   + *std::size_t* - standard unsigned integral type.
 
-  _Simple Type Sizes are System_
+  *Simple Type Sizes are System*
 #+BEGIN_SRC C++
 cout << "System long size=" << sizeof(long) << " bytes.";
 #+END_SRC
@@ -219,7 +219,7 @@ cout << "System long size=" << sizeof(long) << " bytes.";
 | 16-bit OS | 16-bit | 32-bit | n/a       |
 | 32-bit OS | 32-bit | 32-bit | 64-bit    |
 | 64-bit OS | 32-bit | 64-bit | 64-bit    |
-_Modern Alternative to *sizeof()_
+*Modern Alternative to *sizeof()*
 #+BEGIN_SRC C++
 #include <limits>
 ...
